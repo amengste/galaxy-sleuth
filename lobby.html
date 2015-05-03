@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Galaxy Sleuth</title>
+<link rel="stylesheet" type="text/css" href="style.css"
+</head>
+<body >
+	
+	<p><a href="#">This game waiting area</a></p>
+	<table class ="data_recieved"></table>
+  
+  
+  <script src ="jquery.js"></script>
+  <script>
+	  $(function(){
+		$.get('/waiting_lobby', addToInfo);
+		
+		function addToInfo(data){
+			var mdata;
+			if (data[3] === 1){
+				mdata = "<tr><td>Game Name </td><td>" + data[0] + "</td></tr>";
+				mdata += "<tr><td>" + data[1] +"</td><td>" + data[2] + "</td></tr>";
+			}
+			else{
+				mdata += "<tr><td>" + data[1] +"</td><td>" + data[2] + "</td></tr>";
+			}
+			
+			//var mdata = "<tr><td>" + data + "</td></tr>";
+			$('.data_recieved').append(mdata);
+		}
+	  });
+	
+  </script>
+</body>
+</html>

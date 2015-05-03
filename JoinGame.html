@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Join Game</title>
+<link rel="stylesheet" type="text/css" href="style.css"
+</head>
+<body >
+	<div class="option_menu">
+	<form method="get" action="http://localhost:3000/new_game_created" id="mainPage" class="start">
+    
+   
+		<p id = "home_font" >Join Game.</p>
+		<input type= "text" name= "p_name" id = "start_menu" placeholder="Player name..."/><br />	
+		
+		<select name="token_selection" id ="start_menu">
+			<option value="0" selected>Select token...</option>
+			<option value="1">Tina Time Traveller (red) </option>
+			<option value="2">Sam Space Voyager (blue)</option>
+			<option value="3">Mona Moon Walker (yellow)</option>
+			<option value="4">George Galaxy Wonderer (green)</option>
+			<option value="5">Ubura Universalist (purple)</option>
+			<option value="6">Steve Stragazer (white)</option>
+		</select><br />
+		
+		<input type="submit" class="button" name = "join" value = "Join Game"/><br />		
+		
+		<input type="reset" class="button" name ="reset" value = "Reset form" />
+		<br/><br/>
+        
+  </form>
+  </div>
+  
+</body>
+</html>
