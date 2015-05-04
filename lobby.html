@@ -17,13 +17,10 @@
 		$.get('/waiting_lobby', addToInfo);
 		
 		function addToInfo(data){
-			var mdata;
-			if (data[3] === 1){
-				mdata = "<tr><td>Game Name </td><td>" + data[0] + "</td></tr>";
-				mdata += "<tr><td>" + data[1] +"</td><td>" + data[2] + "</td></tr>";
-			}
-			else{
-				mdata += "<tr><td>" + data[1] +"</td><td>" + data[2] + "</td></tr>";
+			var mdata=[];
+			mdata.push('<tr><th>Game name </th><th>'+data[0][0]+'</th></tr>');
+			for(var i in data){
+				mdata.push('<tr><td>'+data[i][1]+'</td><td>'+data[i][2]+'</td></tr>');
 			}
 			
 			//var mdata = "<tr><td>" + data + "</td></tr>";

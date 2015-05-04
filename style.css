@@ -67,8 +67,12 @@ textarea:focus, input:focus {
 table, td, th {
     border: 1px solid green;
 }
+th {
+	background-color: #2ECCFA;
+    color: #610B21;
+}
 
 tr {
     background-color: #FF8000;
-    color: ##0B0B3B;
+    color: #0B0B3B;
 }
